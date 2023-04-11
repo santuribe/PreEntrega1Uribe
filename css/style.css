@@ -11,6 +11,8 @@ body {
     background-color: beige;
     /* tipo de fuente */
     font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/circuit.png);
+
     
 
 
@@ -46,6 +48,7 @@ header .div-nav {
     max-width: 1000px;
     width: 95%;
     margin: 20px auto;
+    
 }
 
 header nav ul li {
@@ -66,6 +69,7 @@ h2{background-color: yellowgreen;
 /* -----------------------NAV BAR END----------------------------- */
 
 /* -----------------------articles----------------------------- */
+
 .sec {
     padding: 50px;
     background-color: #40424a;
@@ -99,12 +103,7 @@ p {
     padding: 10px;
 }
 
-figcaption {
-    width: 40%;
-    background: #889ccf;
-    border-radius: 20px;
-    padding: 10px;
-}
+
 
 .news-1 {
     padding: 10px;
@@ -117,10 +116,136 @@ figcaption {
 }
 
 /* -----------------------articles end----------------------------- */
-.jugo{
-    width: 300px;
-    
+/* ----------------carrusel---------------------------------------- */
+h2 {
+	text-align: center;
+	background-color: yellow;
+    font-family: Menlo, monospace;
+    padding-top: 20px;
+    padding-bottom: 10px;
+	max-width: 1100px;
+    margin-right: auto;
+    margin-left: auto;
+	color: black;
+  }
+  
+  .carrusel {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+  }
+  
+  .carrusel ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	max-width: 1030px;
+	/* max-width: 510px; */
+	scroll-behavior: smooth;
+  }
+  
+  .carrusel-fotos {
+	display: flex;
+	gap: 10px;
+	overflow: auto;
+  }
+  
+  .carrusel-fotos img {
+	background: black;
+	border: 4px solid black;
+	width: 300px;
+	height: 200px;
+	object-fit: contain;
+  }
+  
+  .carrusel-menu {
+	display: none;
+  }
+  
+  @media screen and (min-width: 800px) {
+	.carrusel-fotos {
+	  overflow: hidden;
+	}
+  
+	.carrusel-fotos img {
+	  width: 500px;
+	  height: 400px;
+	}
+	.carrusel-menu {
+	  display: block;
+	}
+	.carrusel-menu img {
+	  box-sizing: border-box;
+	  width: 70px;
+	  height: 60px;
+	  border: 5px solid black;
+	}
+	.carrusel-menu img:hover {
+	  border: none;
+	}
+  }
+  /* ----------------carrusel---------------------------------------- */
+
+.caja { 
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+	color: #ffffff; 
+	font-size: 18px; 
+	font-weight: 400; 
+	text-align: center; 
+	background: #889ccf; 
+	margin: 0 0 25px; 
+	overflow: hidden; 
+	padding: 20px; 
+	border-radius: 35px 0px 35px 0px; 
+	-moz-border-radius: 35px 0px 35px 0px; 
+	-webkit-border-radius: 35px 0px 35px 0px; 
+	border: 2px solid #5878ca;
 }
+
+.grid {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	-webkit-box-pack: center;
+		-ms-flex-pack: center;
+			justify-content: center;
+  }
+  .grid-item {
+	min-width: 250px;
+	max-width: 250px;
+	-webkit-box-flex: 1;
+		-ms-flex: 1 1 250px;
+			flex: 1 1 250px;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	margin-bottom: 1rem;
+  }
+  .wrapper {
+	min-height: 100vh;
+	padding: 2rem 0;
+	background: #40424a;
+	color: #e4e4e8;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+  }
+  .grid-item figure {
+	padding: 0;
+	margin: 0;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.05);
+  }
+  .grid-item figure img {
+	display: block;
+	max-width: 100%;
+  }
+  .grid-item figcaption {
+	display: block;
+	padding: .625rem .5rem;
+	background: beige;
+  }
 /* -----------------------footer----------------------------- */
 footer .foot {
     display: flex;
